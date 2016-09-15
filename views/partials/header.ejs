@@ -15,38 +15,42 @@
     <!-- Bootstrap 4 JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.3/js/bootstrap.min.js" integrity="sha384-ux8v3A6CPtOTqOzMKiuo3d/DomGaaClxFYdCu2HPMBEkf6x2xiDyJ7gkXU0MWwaD" crossorigin="anonymous"></script>
     <!-- Font Awesome JavaScript -->
-	<script src="https://use.fontawesome.com/f3e990ca7b.js"></script>
-	<!-- Google Fonts -->
+    <script src="https://use.fontawesome.com/f3e990ca7b.js"></script>
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Quicksand:400,700" rel="stylesheet">
     <!-- Kartsaver CSS -->
     <link rel="stylesheet" href="app.css">
 </head>
 
 <body>
-    <nav class="navbar navbar-dark bg-primary">
-        <div class="container" id="header">
-            <button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#Menu" aria-controls="exCollapsingNavbar2" aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-bars" aria-hidden="true"></i></button>
-            <a class="navbar-brand" href="/"><span id="logo"><i class="fa fa-cart-plus" aria-hidden="true"></i></span>Kartsaver</a>
-            <div class="collapse navbar-toggleable-xs pull-right" id="Menu">
-                <ul class="nav navbar-nav">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="/">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/error">Savings</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/error">SignIn</a>
-                    </li>
-                </ul>
+    <div id="main">
+        <nav class="navbar navbar-dark bg-primary" id="headerNav">
+            <div class="container" id="header">
+                <button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#Menu" aria-controls="exCollapsingNavbar2" aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-bars" aria-hidden="true"></i></button>
+                <a class="navbar-brand" href="/"><span id="logo"><i class="fa fa-cart-plus" aria-hidden="true"></i></span>Kartsaver</a>
+                <div class="collapse navbar-toggleable-xs pull-right" id="Menu">
+                    <ul class="nav navbar-nav">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="/">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/error">Savings</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/error">SignIn</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="container input-group" id="searchForm">
+                    <form action="/compare" method="POST">
+                        <input id="searchInp" class="form-control" type="text" name="searchInp" placeholder="Product you're looking for!">
+                        <span class="input-group-btn">
+                            <button id="searchBtn" class="btn btn-primary" type="submit"><i class="fa fa-search" aria-hidden="true"\></i></button>
+                        </span>
+                    </form>
+                </div>
             </div>
         </div>
-    </nav>
-    <div class="container input-group center-block form-horizontal" id="searchForm">
-        <form action="/compare" method="POST">
-            <input id="searchInp" class="form-control" type="text" name="searchInp" placeholder="Save money on your purchase">
-            <span class="input-group-btn">
-            <button id="searchBtn" class="btn btn-primary" type="submit"><i class="fa fa-search" aria-hidden="true"\></i></button>
-            </span>
-        </form>
-    </div>
+
