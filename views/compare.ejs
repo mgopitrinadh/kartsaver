@@ -1,0 +1,21 @@
+<% include partials/header %>
+
+<div class="container" id="compare">
+	<!--<a href="/json">View JSON</a>-->
+	<div class="row">
+		<% productList.forEach(function(product) { %>
+			<div class="col-xl-3 col-md-4 col-sm-6 col-xs-12" id="searchDisplay">
+				<div class="thumbnail">
+					<a class="image" href="<%= product.url %>"><img src="<%= product.image %>"></a>
+					<p class="title"><%= product.title %></p>
+					<p class="price">Price: <del><%= product.price["amount"] %>
+						<%= product.price["currency"] %></del> (<span class="discount"><%= product.discount %></span>% off)</p>
+					<p class="specialPrice">Special Price: <%= product.specialPrice["amount"] %>
+						<%= product.specialPrice["currency"] %></p>
+				</div>
+			</div>
+		<% }); %>
+	</div>
+</div>
+
+<% include partials/footer %>
