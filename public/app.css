@@ -20,6 +20,7 @@ body {
 	font-size: 2rem;
 	color: teal !important;
 	border-bottom: 3px solid teal;
+	position: absolute;
 }
 
 .navbar-dark .navbar-nav .nav-link {
@@ -64,8 +65,8 @@ body {
 #searchForm {
 	width: 100%;
 	height: 10%;
-	margin: 1rem auto;
-	padding: 1rem 3rem;
+	margin: 0.8rem auto;
+	padding: 0.5rem 4rem;
 	/*border: 1px dashed red; for testing*/
 }
 
