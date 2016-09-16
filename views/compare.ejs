@@ -1,16 +1,16 @@
 <% include partials/header %>
 
-<div class="container" id="compare">
+<div class="container" id="searchResult">
 	<!--<a href="/json">View JSON</a>-->
-	<div class="row">
+	<div class="row" id="searchDisplay">
 		<% productList.forEach(function(product) { %>
-			<div class="col-xl-3 col-md-4 col-sm-6 col-xs-12" id="searchDisplay">
+			<div class="col-xl-3 col-md-4 col-sm-6 col-xs-12" id="searchItem">
 				<div class="thumbnail">
-					<a class="image" href="<%= product.url %>"><img src="<%= product.image %>"></a>
-					<p class="title"><%= product.title %></p>
-					<p class="price">Price: <del><%= product.price["amount"] %>
-						<%= product.price["currency"] %></del> (<span class="discount"><%= product.discount %></span>% off)</p>
-					<p class="specialPrice">Special Price: <%= product.specialPrice["amount"] %>
+					<a id="image" href="<%= product.url %>"><img class="img-rounded" src="<%= product.image %>"></a>
+					<p id="title"><strong><%= product.title %></strong></p>
+					<p id="price"><strong>Price: </strong><del><%= product.price["amount"] %>
+						<%= product.price["currency"] %></del> (<span id="discount"><%= product.discount %>%</span> off)</p>
+					<p id="specialPrice"><strong>Flipkart Price: </strong><%= product.specialPrice["amount"] %>
 						<%= product.specialPrice["currency"] %></p>
 				</div>
 			</div>
